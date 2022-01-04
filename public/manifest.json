@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Russian Formatter",
+  "description": "Show Russian characters in correct fonts.",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["*"],
+      "js": ["js/content_script.js"]
+    }
+  ],
+  "icons": {
+    "128": "icon_128.png"
+  }
+}
