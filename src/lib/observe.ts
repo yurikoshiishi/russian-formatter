@@ -1,8 +1,10 @@
-export const observeConfig = {attributes: true, childList: true, subtree: true};
-
 export const observeDOMChange = (
   target: HTMLElement,
-  callback: (mutationList: MutationRecord[], observer: MutationObserver) => void
+  callback: (
+    mutationList: MutationRecord[],
+    observer: MutationObserver
+  ) => void,
+  observeConfig: MutationObserverInit
 ) => {
   const observer = new MutationObserver(callback);
 
