@@ -1,11 +1,11 @@
-import {observeDOMChange} from './lib/observe';
-import {isRussianDocument} from './lib/russian';
-import {isHTMLElement, isTextNode} from './lib/node';
+import { observeDOMChange } from "./lib/observe";
+import { isRussianDocument } from "./lib/russian";
+import { isHTMLElement, isTextNode } from "./lib/node";
 import {
   applyStylesToRussianCharacters,
   replaceRussianTextNode,
   replaceRussianTextNodesUnderElement,
-} from './services/russianFormatter';
+} from "./services/russianFormatter";
 
 const observeConfig: MutationObserverInit = {
   childList: true,
@@ -34,11 +34,11 @@ function main() {
 
       mutations.forEach((mutation) => {
         switch (mutation.type) {
-          case 'characterData':
+          case "characterData":
             if (isTextNode(mutation.target)) {
               return replaceRussianTextNode(mutation.target);
             }
-          case 'childList':
+          case "childList":
             if (mutation.addedNodes?.length) {
               mutation.addedNodes.forEach((node) => {
                 if (isTextNode(node)) {

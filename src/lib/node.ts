@@ -16,7 +16,7 @@ export function findTextNodesUnderElement(element: Element): Text[] {
 }
 
 export function isTextNode(node: Node): node is Text {
-  return node.nodeName === '#text';
+  return node.nodeName === "#text";
 }
 
 export function isHTMLElement(node: Node): node is HTMLElement {

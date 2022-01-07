@@ -1,14 +1,14 @@
-import {hasRussianCharacter} from '../lib/russian';
-import {findTextNodesUnderElement} from '../lib/node';
+import { hasRussianCharacter } from "../lib/russian";
+import { findTextNodesUnderElement } from "../lib/node";
 
-const RUSSIAN_STYLES_ID = 'russian-formatter-styles';
-const RUSSIAN_TEXT_CLASSNAME = 'russian-formatter__has-russian';
+const RUSSIAN_STYLES_ID = "russian-formatter-styles";
+const RUSSIAN_TEXT_CLASSNAME = "russian-formatter__has-russian";
 
 export function applyStylesToRussianCharacters() {
   if (document.getElementById(RUSSIAN_STYLES_ID)) {
     return;
   }
-  const styles = document.createElement('style');
+  const styles = document.createElement("style");
   styles.id = RUSSIAN_STYLES_ID;
   styles.innerHTML = `
         .${RUSSIAN_TEXT_CLASSNAME} {
@@ -40,7 +40,7 @@ export function replaceRussianTextNode(node: Text) {
 
   const replacedTextHTML = `<span class="${RUSSIAN_TEXT_CLASSNAME}">${text}</span>`;
 
-  const newNode = document.createElement('span');
+  const newNode = document.createElement("span");
   newNode.innerHTML = replacedTextHTML;
   node.replaceWith(newNode);
 }

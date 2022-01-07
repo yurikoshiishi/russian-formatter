@@ -7,5 +7,5 @@ export function hasRussianCharacter(text: string) {
 export function isRussianDocument() {
   const lang = document.documentElement.lang;
 
-  return lang === 'ru';
+  return lang === "ru";
 }
