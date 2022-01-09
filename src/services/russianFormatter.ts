@@ -11,6 +11,7 @@ export function applyStylesToRussianCharacters() {
   const styles = document.createElement("style");
   styles.id = RUSSIAN_STYLES_ID;
   styles.innerHTML = `
+        *::placeholder,
         .${RUSSIAN_TEXT_CLASSNAME} {
             font-family: system-ui, monospace, sans-serif;
         }
