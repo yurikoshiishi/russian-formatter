@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Russian Formatter",
-  "description": "Show Russian characters in correct fonts.",
+  "description": "An extension to show Russian characters in proper font.",
   "version": "1.0",
   "content_scripts": [
     {
