@@ -1,5 +1,4 @@
 import { observeDOMChange } from "./lib/observe";
-import { isRussianDocument } from "./lib/russian";
 import { isHTMLElement, isTextNode } from "./lib/node";
 import {
   applyStylesToRussianCharacters,
@@ -14,10 +13,6 @@ const observeConfig: MutationObserverInit = {
 };
 
 function main() {
-  if (isRussianDocument()) {
-    return;
-  }
-
   const rootElement = document.body || document.documentElement;
 
   if (!rootElement) {
